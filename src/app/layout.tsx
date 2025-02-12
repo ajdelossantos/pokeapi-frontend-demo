@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Raleway, Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import { Providers } from "@/app/providers";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -27,7 +28,7 @@ export default function RootLayout({
       <body
         className={`${raleway.variable} ${robotoMono.variable} antialiased`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
